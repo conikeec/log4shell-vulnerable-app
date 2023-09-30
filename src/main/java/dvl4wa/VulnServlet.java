@@ -18,6 +18,7 @@ public class VulnServlet extends HttpServlet {
       res.setContentType("text/plain; charset=utf-8");
       Writer writer = res.getWriter();
       if(headers.containsKey("x-log")) {
+        
         writer.write("Logging to console using vulnerable log4j2!\n");
         logger.info(headers.get("x-log"));
         
